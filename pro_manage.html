@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product manage</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="pro_manage.css">
+    <link rel="stylesheet" href="New_admin.css">
+    <script src="scripts.js"></script>
+    <script src="pro_manage.js"></script>
+    <script src="admin_profile.js"></script>
+    <script src="securecheck.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav id="nav-bar">
+            <div class="logo">
+                <a href="homepage" id="Logo"><img src="/pic source/material/logo.png"></a>
+            </div>
+            <div class="nav_cat">
+                <a href="product_detail">All</a>
+                <a href="product_detail?sex=Males">Males</a>
+                <a href="product_detail?sex=Females">Females</a>
+                <a href="product_detail?sex=kids">Kids</a>
+            </div>
+
+            <div class="nav_seacrh">
+                <form class="search_section" action="/product_detail" method="GET">
+                    <input class="search" type="text" placeholder="search" name="search_value" id="search_bar">
+                    <input type="submit" name="search_products" value="Search">
+                </form>
+            </div>
+
+            <div class="nav_button">
+                <a href="profile_adim" id="profile_photo"><img src="/pic source/material/profile.png"
+                        id="Admin_pic"></a>
+                <a href="login" id="Login">login</a>
+                <img id="hovery" src="/pic source/material/more.png">
+            </div>
+        </nav>
+    </header>
+    <main>
+        
+        <div class="box">
+            <h2>Product list</h2>
+        </div>
+        <div class="sidenav">
+            <div class="profile">
+                <a href="/profile_adim"> <img src="/pic source/material/more.png" id="Admin_pic"><h5 style="margin: 0;">
+                    <p id="Admin_name">Natthaphat</p><p id="Admin_surname">Pintip</p></h5></a>
+            </div>
+            <div class="list">
+                <a href="/pro_manage"> <img src="/pic source/material/cart.png"><p>Product List</p></a>
+                <a href="/admin_manage"><img src="/pic source/material/edit.png"> <p>Admin List</p></a>
+                <a href="/edit_admin"><img src="/pic source/material/add.png" > <p>Add profile</p></a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content-box">
+                <div class="add">
+                    <a href="add_product" id="Add product" style="text-decoration: none;">Add product</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product ID</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body">
+                        <tr class="p1">
+                            <td>Product Name</td>
+                            <td>Product ID</td>
+                            <td>Category</td>
+                            <td>Price</td>
+                            <td><a href="edit_product" style="text-decoration: none;">Edit</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+        <section class="footer">
+            <div class="help_container">
+                <div class="column_help">
+                    <p class="footer_header">Helping</p>
+                </div>
+
+                <div class="column_help">
+                    <p class="footer_header">Company</p>
+                </div>
+
+                <div class="column_help">
+                    <p class="footer_header">Our shop</p>
+                </div>
+
+                <div class="column_help">
+                    <a href="login" class="helping_link">
+                        account
+                    </a>
+                </div>
+                <div class="column_help">
+                    <a href="member" class="helping_link">
+                        Team member
+                    </a>
+                </div>
+                <div class="column_help">
+                    <a href="product_details" class="helping_link" value="Females">
+                        products for females
+                    </a>
+                </div>
+
+                <div class="column_help"> 
+                    <a href="GGmap.html" class="helping_link">
+                        company location
+                    </a>
+                </div>
+                
+                <div class="column_help">
+                    <a href="#" class="helping_link">
+                        Kerb99 purpose
+                    </a>
+                </div>
+                <div class="column_help">
+                    <a href="product_details" class="helping_link" value="Males">
+                        products for males
+                    </a>
+                </div>
+
+            </div>
+            <div class="footer_des_container">
+                <div class="footer_des_container">
+                    <p class="contact">&copy; 2023 Kerb99. Our Contact: <a id="mailto"
+                            href="mailto: kerbb.official@gmail.com">kerbb.official@gmail.com</a></p>
+                </div>
+            </div>
+
+        </section>
+
+    </footer>
+</body>
+
+</html>

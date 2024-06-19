@@ -1,0 +1,161 @@
+/* General styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 130px;
+}
+
+/* Container for centering */
+.container {
+    height: 70vh !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.add{
+    color:black;
+    margin-left: 450px;
+    padding-left: 13px;
+    border-radius: 30px;
+    width: 100px;
+    height: 22px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+.box{
+        margin-left: 500px;
+        padding-left: 35px;
+        border-radius: 30px;
+        width: 170px;
+        height: 28px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+        margin-bottom: 20px;
+}
+/* Content box for styling */
+.content-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; /* Set maximum width for larger screens */
+}
+
+/* Table styles */
+table {
+    width: 100%; /* Make table span the full width of the content box */
+    border-collapse: collapse; /* Remove default table borders */
+    margin: 0 auto; /* Center the table horizontally */
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left; /* Align table content to the left */
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray background for table header */
+}
+button{
+    margin-top: 20px;
+    width: 80px;
+    margin-left: 520px;
+}
+section.footer{
+    margin-top: 150px;
+}
+.sidenav{
+    top: 100px;
+    height: 100%;
+    background-color: rgba(248, 165, 177, 0.4);
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    position: fixed;
+    backdrop-filter: blur(5px);
+    overflow:hidden;
+    transition: width 0.5s;
+}
+.sidenav .list{
+    margin-top: 40px;
+}
+
+.sidenav img{
+    margin-left: 20%;
+    margin-right: 20%;
+    object-fit: cover;
+    max-width: 30px;
+    transition: max-width 0.5s;
+}
+
+.sidenav .profile img{
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.sidenav .profile a{
+    background-color: #ffd6d6;
+}
+
+.sidenav .profile{
+    margin-top: 50px;
+}
+
+.sidenav a{
+    display: flex;
+    text-decoration: none;
+}
+
+.sidenav:hover{
+    width: 250px;
+}
+.sidenav a:hover{
+    background-color: rgba(248, 165, 177, 0.7);
+}
+
+.sidenav:hover .profile img{
+    max-width: 70px;
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    body{
+        width: 600px;
+    
+    }
+    .content-box {
+        width: 100%; /* Full width on mobile */
+        margin-left: 180px;
+    }
+    .container {
+        height: 120vh !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+        margin-left: 10px;
+        
+    }
+    h2{
+        margin-left:0% ;
+    }
+    .box{
+        margin-left: 20px;
+    }
+    .add{
+        margin-left: 300px;
+    }
+    button{
+        margin-top: 20px;
+        width: 80px;
+        margin-left: 320px;
+    }
+    .sidenav{
+        top: 40px !important;
+    }
+}

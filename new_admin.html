@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Admin</title>
+    <link rel="stylesheet" href="New_admin.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="scripts.js"></script>
+    <script src="t2.js"></script>
+    <script src="admin_profile.js"></script>
+    <script src="Edit_admin.js"></script>
+    <script src="securecheck.js"></script>
+
+
+
+    
+</head>
+<header>
+        <nav id="nav-bar">
+            <div class="logo">
+                <a href="homepage" id="Logo"><img src="/pic source/material/logo.png"></a>
+            </div>
+            <div class="nav_cat">
+                <a href="product_detail">All</a>
+                <a href="product_detail?sex=Males">Males</a>
+                <a href="product_detail?sex=Females">Females</a>
+                <a href="product_detail?sex=kids">Kids</a>
+            </div>
+
+            <div class="nav_seacrh">
+                <form class="search_section" action="/product_detail" method="GET">
+                    <input class="search" type="text" placeholder="search" name="search_value" id="search_bar">
+                    <input type="submit" name="search_products" value="Search">
+                </form>
+            </div>
+
+            <div class="nav_button">
+                <a href="profile_adim" id="profile_photo"><img src="/pic source/material/profile.png"
+                        id="Admin_pic"></a>
+                <a href="login" id="Login">login</a>
+                <img id="hovery" src="/pic source/material/more.png">
+            </div>
+        </nav>
+    </header>
+
+<body>
+    <div class="sidenav">
+        <div class="profile">
+            <a href="/profile_adim"> <img src="/pic source/material/more.png" id="Admin_pic"><h5 style="margin: 0;"><p id="Admin_name">Natthaphat</p><p id="Admin_surname">Pintip</p></h5></a>
+        </div>
+        <div class="list">
+            <a href="/pro_manage"> <img src="/pic source/material/cart.png"><p>Product List</p></a>
+            <a href="/admin_manage"><img src="/pic source/material/edit.png"> <p>Admin List</p></a>
+            <a href="/edit_admin"><img src="/pic source/material/add.png" > <p>Add profile</p></a>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="card">
+
+            <label for="input-img" id=input>
+                <input type="file" accept="image/jpeg, image/png , image/jpg" id="input-img"
+                            style="display: none;">
+                <img src="https://lh3.googleusercontent.com/d/1oy4qL6Jh-TuaSacPxuem19ihA0yZhOVs" id="profileimg">
+            </label>
+            <div class="col">
+                <h3 Name="ee">Profile Detail</h3>
+
+                <p>Account ID</p>
+                <input id="new_Account_ID" type="text" placeholder="enter ID">
+
+                <p>Name</p>
+                <input id="new_name" type="text" placeholder="enter name">
+
+                <p>Lastname</p>
+                <input id="new_surname" type="text" placeholder="enter surname">
+
+                <p>Adrress</p>
+                <input id="new_address" name="address" type="text" placeholder="enter address">
+
+                <p>Email</p>
+                <input id="new_email" type="text" placeholder="enter email">
+                <p>UserName</p>
+                <input id="new_UserName" type="text" placeholder="enter Username">
+                <p>Password</p>
+                <input id="new_Password" type="text" placeholder="enter Password">
+
+                <div class="bt">
+                    <button style="margin-right: 10px;" onclick="toApply()">
+                        Save info
+                    </button>
+                    <button id="dlt" onclick="toDelete()">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>        
+        
+        <section class="footer">
+            <div class="help_container">
+                <div class="column_help"> 
+                    <p class = "footer_header">Helping</p>
+                </div> 
+    
+                <div class="column_help"> 
+                    <p class = "footer_header">Company</p>
+                </div> 
+    
+                <div class="column_help"> 
+                    <p class = "footer_header">Our shop</p>
+                </div> 
+                
+                <div class="column_help"> 
+                    <a href="login" class="helping_link">
+                        account
+                    </a>
+                </div> 
+                <div class="column_help"> 
+                    <a href="member" class="helping_link">
+                        Team member
+                    </a>
+                </div> 
+                <div class="column_help"> 
+                    <a href="product_details" class="helping_link" value="Females">
+                        products for females
+                    </a>
+                </div> 
+    
+                <div class="column_help"> 
+                    <a href="GGmap.html" class="helping_link">
+                        company location
+                    </a>
+                </div>
+                <div class="column_help"> 
+                    <a href="#" class="helping_link">
+                        Kerb99 purpose
+                    </a>
+                </div> 
+                <div class="column_help"> 
+                    <a href="product_details" class="helping_link" value="Males">
+                        products for males
+                    </a>
+                </div> 
+                
+            </div>
+            <div class="footer_des_container">
+                <div class="footer_des_container">
+                    <p class = "contact">&copy; 2023 Kerb99. Our Contact: <a id="mailto" href="mailto: kerbb.official@gmail.com">kerbb.official@gmail.com</a></p>
+                </div>
+            </div>
+                
+        </section>
+            
+    </footer>
+</body>
+
+<script type="application/javascript">
+
+    function ChangeName() {
+        var Edited = document.querySelector('h3[Name="ee"]');
+        Edited.innerHTML = "Profile Detail &nbsp; &nbsp; &nbsp; <span class='edited'>*Edited</span>";
+        console.log(Edited.textContent)
+        var Name = document.getElementsByTagName("input");
+        for (var i = 0; i < Name.length; i++) {
+            if (Name[i].value != "") {
+                Name[i].placeholder = Name[i].value;
+            }
+            Name[i].value = "";
+        }
+
+    }
+
+
+
+</script>
+
+</html>
