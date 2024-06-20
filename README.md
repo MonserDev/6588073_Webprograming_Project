@@ -34,7 +34,7 @@ This is a University Project.
 ![img](https://i.imgur.com/EnwHyXG.png[/img])
 
 ### Script set cookies
- ` ` `
+ ` ` `js
 function setCookie(name,value,setdate){
     const data = new Date();
     data.setTime(data.getTime() + (setdate * 24 * 60 * 60 *1000));
