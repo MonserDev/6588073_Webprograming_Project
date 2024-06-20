@@ -34,17 +34,17 @@ This is a University Project.
 ![img](https://i.imgur.com/EnwHyXG.png[/img])
 
 ### Script set cookies
-` ` `
+```
 function setCookie(name,value,setdate){
     const data = new Date();
     data.setTime(data.getTime() + (setdate * 24 * 60 * 60 *1000));
     let expires = "expires=" + data.toUTCString();
     document.cookie =  `${name}=${value}; ${expires}; path = /`;
 }
-` ` `
+```
 
  ### Script Fetcher (Fetch api)
-` ` `
+```
  function fetcher(url,functions){
     fetch(url)
         .then(response => response.json()) 
@@ -62,10 +62,10 @@ function setCookie(name,value,setdate){
             ul.appendChild(li);
         });
     }
-   ` ` `
+```
 
 ### Script Sidebar search
-` ` `
+```
 function reAction(){
     const search = document.querySelector("#side_search");
     const Catego = document.querySelector("#category");
@@ -87,4 +87,4 @@ function reAction(){
         fetcher(`http://localhost:3000/product/price/${min}/${max}/${search.value}/${Catego.value}`,toProduct);
     }
 }
-` ` `
+```
