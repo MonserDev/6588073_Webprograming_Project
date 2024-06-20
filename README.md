@@ -1,4 +1,4 @@
-![image](https://github.com/MonserDev/6588073_Webprograming_Project/assets/139025298/67ab72a6-d7b5-42ed-8492-2d277fac3a2e)# Shopping Website
+# Shopping Website
 This is a University Project.
 **In this project i have learned about**
 
@@ -23,12 +23,12 @@ This is a University Project.
 
 ### Search page (pull data from database)
 
-[img](https://i.imgur.com/9ygAbjc.png[/img])
+![img](https://i.imgur.com/9ygAbjc.png[/img])
 
 ### Profilepage (Session cookies)
 
-[img](https://i.imgur.com/iL9eGVX.png[/img])
+![img](https://i.imgur.com/iL9eGVX.png[/img])
 
 ### Add/Edit Product page (REST API)
 
-[img](https://i.imgur.com/EnwHyXG.png[/img])
+![img](https://i.imgur.com/EnwHyXG.png[/img])
